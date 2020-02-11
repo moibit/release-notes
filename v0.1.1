@@ -1,0 +1,20 @@
+# Release notes
+
+## Enhancements
+
+1. Moibit users can now login to the developer dashboard and add, remove, pin and view files using a user interface. They can also play around with API endpoints, view API docs, view their API key and secret, the number of files they have added etc.
+2. Users can now reset their password if they forget it.
+3. All file addition endpoints (writefile, writetexttofile, writefiles), as well as filestatus and listfiles endpoints now show the pin status of the file in question and the time at which the file was added/updated.
+4. There's enhanced file replication (all user files are now pinned across multiple nodes by default).
+5. There's a new endpoint stream to add larger files faster.
+6. There's a new endpoint writefiles to upload directories.
+7. There's a new endpoint makedir to create an empty directory.
+8. There's a new endpoint versions to view a list of available versions for any file.
+
+## Optimization and Fixes
+
+1. The storageused endpoint now calculates the storage used by a user with much greater accuracy.
+2. The readfile endpoint is now optimized to use less RAM which allows concurrent reading of multiple large files.
+3. The remove endpoint now removes a file from the file tree and also unpins it - effectively removing it completely.
+
+
